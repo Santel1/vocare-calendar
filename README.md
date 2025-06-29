@@ -1,137 +1,114 @@
-Vocare Calendar Management Tool
-Welcome to Vocare, a simple and efficient calendar management tool designed to help you organize your appointments effortlessly. This project is built using Next.js, Supabase for authentication and database management, and Tailwind CSS for styling.
-Table of Contents
-Features (#features)
+# 📅 Vocare Kalender-App
 
-Prerequisites (#prerequisites)
+Ein einfaches und modernes Kalender-Tool zur Verwaltung von Terminen, entwickelt mit Next.js, TailwindCSS, shadcn/ui, Supabase und Next.js API Routes.🖓 Zuletzt aktualisiert: 29.06.2025
 
-Installation (#installation)
+## 🛠️ Technologien
 
-Running the Project (#running-the-project)
+⚛️ Next.js 14 App Router
 
-Usage (#usage)
+🧠 TypeScript
 
-Contributing (#contributing)
+🎨 TailwindCSS
 
-License (#license)
+🧩 shadcn/ui
 
-Features
-User authentication (login and registration) with Supabase.
+🟢 Supabase (PostgreSQL + Auth)
 
-Calendar views (month, week, and list).
+🗖 date-fns
 
-Create, edit, delete, and mark appointments as completed.
+🎯 lucide-react Icons
 
-Filter appointments by date range.
+### ✨ Funktionen
 
-Responsive design with a modern UI.
+🗕 Monats-, Wochen- und Listenansicht
 
-Prerequisites
-Before you begin, ensure you have the following installed on your system:
-Node.js (v18.x or later recommended)
+➕ Termine erstellen, bearbeiten, löschen, als erledigt markieren
 
-npm or yarn (package manager)
+🔍 Termine nach Datum filtern
 
-Git (for cloning the repository)
+📝 Notizen, Ort und Zeitangaben hinzufügen
 
-A Supabase account and project (for authentication and database)
+🔐 Sichere Speicherung in Supabase
 
-Supabase Setup
-Sign up at supabase.io and create a new project.
+📱 Responsives UI mit modernen Modalkomponenten
 
-Obtain your Supabase URL and anon key from the project settings.
+### ⚙️ Setup & Start
 
-Update the .env.local file with your Supabase credentials (see Installation (#installation) for details).
-
-Installation
-Clone the repository:
-bash
-
-git clone https://github.com/your-username/vocare-calendar.git
+git clone https://github.com/Santel1/vocare-calendar.git
 cd vocare-calendar
-
-Install dependencies:
-Using npm:
-bash
-
 npm install
 
-Or using yarn:
-bash
+### 📁 .env.local erstellen
 
-yarn install
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
-Configure environment variables:
-Create a .env.local file in the root directory.
-
-Add the following variables with your Supabase credentials:
-
-NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-
-Set up the Supabase database:
-In your Supabase project, create the following tables:
-appointments (with columns: id, title, start, end, notes, patient, category, completed, created_at, updated_at)
-
-patients (with columns: id, firstname, lastname, birth_date, care_level, pronoun, email, phone, active_since, created_at)
-
-categories (with columns: id, label, description, color, icon, created_at, updated_at)
-
-Ensure the patient field in appointments references patients.id, and category references categories.id.
-
-Running the Project
-Start the development server:
-bash
+### 🚀 Projekt starten
 
 npm run dev
 
-Or with yarn:
-bash
+📍 Öffne deinen Browser: http://localhost:3000
 
-yarn dev
+### ☁️ Deployment mit Vercel
 
-Open your browser:
-Navigate to http://localhost:3000 (or the port specified in your terminal).
+🔧 Installieren:
 
-Log in or register:
-If not logged in, you’ll see the home page with options to log in or register.
+npm install -g vercel
+vercel login
 
-Use the provided email and password to access the calendar.
+🌍 Projekt deployen:
 
-Usage
-Home Page: Welcome screen with login and registration options for unauthenticated users.
+cd vocare-calendar
+vercel
 
-Calendar: Switch between month, week, and list views to manage appointments.
+🗒 Vercel erstellt automatisch eine .vercel-Datei.
 
-Appointment Management: Add new appointments, mark them as completed, or delete them.
+🔐 Umgebungsvariablen hinzufügen:
 
-Filtering: Use the filter option to view appointments within a specific date range.
+Im Vercel-Dashboard:
 
-Contributing
-Contributions are welcome! To contribute:
-Fork the repository.
+NEXT_PUBLIC_SUPABASE_URL
 
-Create a new branch (git checkout -b feature/your-feature).
+NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-Commit your changes (git commit -m "Add your message").
+📣 Danach wird deine App live sein z. B.: https://vocare-calendar.vercel.app
 
-Push to the branch (git push origin feature/your-feature).
+### 🧽 Nutzung
 
-Open a Pull Request.
+🏠 Startseite: Login- & Registrierungsoption
 
-Please ensure your code follows the project’s style guidelines and includes appropriate tests.
-License
-This project is licensed under the MIT License (LICENSE). Feel free to use, modify, and distribute it as per the license terms.
-Notes
+📅 Kalender: Monat / Woche / Liste
 
-<!-- GitHub Repository: -->
+✅ Terminverwaltung: Hinzufügen, bearbeiten, erledigen, löschen
 
-Supabase Configuration: The table structure is based on your existing code. Adjust the schema if you’ve modified it.
+🔎 Filter: Termine im gewählten Zeitraum anzeigen
 
-Port: The default port for Next.js is 3000. If you’ve changed it, update the Running the Project section accordingly.
+🤝 Mitmachen
 
-Localization: Since your project uses German, you might want to add a section about internationalization if you plan to support multiple languages.
+🍴 Repository forken
 
-Customization
-If you have specific dependencies (e.g., Tailwind CSS, TypeScript), additional scripts, or a different deployment process, let me know, and I’ll update the README.md accordingly. You can also add a section for deployment (e.g., Vercel) if needed.
-Let me know if you’d like further adjustments!
+🛠 Neuen Branch erstellen:
+
+git checkout -b feature/deine-funktion
+
+✅ Änderungen committen:
+
+git commit -m "Füge deine Nachricht hinzu"
+
+🚀 Pushen:
+
+git push origin feature/deine-funktion
+
+📬 Pull Request öffnen
+
+Bitte halte dich an die Stilrichtlinien und schreibe, wenn möglich, Tests.
+
+📄 Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert.🔓 Du darfst es nutzen, modifizieren und verbreiten. Siehe LICENSE.
+
+👤 Autor
+
+Oleksandr Klymovych
+📩 oleksandr.klymovych1@gmail.com
+🔗 GitHub – https://github.com/Santel1
