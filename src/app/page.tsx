@@ -63,7 +63,7 @@ export default function Home() {
         <div className="space-x-4">
           <Button
             onClick={() => router.push("/login")}
-            className="bg-blue-500 text-white"
+            className="bg-blue-400 text-white"
           >
             Einloggen
           </Button>

@@ -41,6 +41,7 @@ npm install
 ### 📁 .env.local erstellen
 
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 ### 🚀 Projekt starten
